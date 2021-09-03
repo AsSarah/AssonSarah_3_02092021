@@ -16,22 +16,23 @@ header{
 }
 .bouton{
 border-radius: 50px;
-border-style: groove;
+border-style: none;
 font-size : 100%;
 line-height : 3.15;
 font-weight : bold;
-background: linear-gradient(to bottom,#FF79DA 0%,#FF79DA 5%,#9356DC 100% );
+background: linear-gradient(to bottom,#FF79DA 9%,#FF79DA 10%,#9356DC 150%,#9356DC 90% );
+
 }
 
 
 .fonctionnement{
    margin-bottom: 2em;
-   margin-top:  1em;
+   margin-top: 1em;
 }
 ol{
    display: flex;
    line-height: 3.15em;
-   box-shadow: black;
+   
    flex-direction: column;
 }
 
@@ -140,7 +141,9 @@ a{
    background-color: #F2F2F2;
 }
                               /* la note enchantÃ©e*/
-
+.carte_2{
+   background-color: #F2F2F2;
+}
 .img_carte_2{
    object-fit: cover;
     height: 260px;
@@ -148,9 +151,13 @@ a{
 }
 .carte_2_titre{
    color: black;
+
 }
 
-                               /* La palette du goÃ»t*/
+                               /* La palette du goût*/
+.carte_3{
+   background-color: #F2F2F2;
+}                               
 .img_carte_3{
    object-fit: cover;
     height: 260px;
@@ -158,4 +165,15 @@ a{
 }
 .carte_3_titre{
    color: black;
+}
+                              /* Le délice des sens*/
+.carte_4{
+background-color: #F2F2F2;}                               
+.img_carte_4{
+ object-fit: cover;
+ height: 260px;
+  width: 360px;
+}
+ .carte_4_titre{
+color: black;
 }
