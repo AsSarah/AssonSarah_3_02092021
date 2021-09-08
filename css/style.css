@@ -3,13 +3,27 @@ header{
    flex-direction: row;
    justify-content: center;
    flex-wrap: wrap;
+   align-items: center;
 }
 .logo_img{
    width: 200px;
 }
-.Reservation{
+.logo{
+   padding-right: 5em;
+}
+.retour{
+   padding-right: 2em;
+}
+.fleche{
+   line-height: 2em;
+   color: black;
+ 
+}
+                              
+.Reservation{                          /* description*/
 	background-color: #F2F2F2;
    text-align: center;
+   padding-bottom: 3em;
 }
 .adresse{ 
 	background-color: #d9d7d7;
@@ -20,20 +34,36 @@ border-style: none;
 font-size : 100%;
 line-height : 3.15;
 font-weight : bold;
-background: linear-gradient(to bottom,#FF79DA 9%,#FF79DA 10%,#9356DC 150%,#9356DC 90% );
+background: linear-gradient(175deg,#FF79DA 2%,#9356DC 160%,#9356DC 130% );
+cursor: pointer;
 
 }
 
 
-.fonctionnement{
+.fonctionnement{                        /*fonctionnement du site*/
    margin-bottom: 2em;
    margin-top: 1em;
 }
 ol{
    display: flex;
    line-height: 3.15em;
-   
    flex-direction: column;
+  
+}
+.liste_nombre{
+   display: flex;
+}
+.nombre{
+   line-height: 1em;
+   border-radius: 50%;
+   height: 1em;
+   width: 1em;
+   background-color: #9356DC;
+   display: flex;
+   
+   flex-wrap: wrap;
+   align-content: center;
+   justify-content: center;
 }
 
 .liste{
@@ -46,26 +76,89 @@ ol{
    padding-right: 1em;
    margin-bottom: 1em;
    font-weight: bold;
+  
 
 }
+
+.liste:hover{
+   background:RGBA(235,211,255,0.47);
+}
+
+
+
+
 
 .mobile{
    padding-right: 1em;
    color: grey;
+   padding-left: 1em;
 }
 
 .icone_list{
    padding-right: 1em;
    color: grey;
+   padding-left: 1em;
 }
 
 .store{
    padding-right: 1em;
    color: #9356DC;
+   padding-left: 1em;
 }
 
                 /* partie restaurant*/
+.nouveau{                                  /*bouton nouveau restaurants*/
+   background-color: #99E2D0;
+   position: absolute;
+   border: none;
+   margin-left: 16em;
+   margin-right: 1em;
+   margin-top: 2em;
+   line-height: 2em;
+   font-size: medium;
+   color:mediumseagreen;
+   font-weight: bold;
+}
 
+.icone_coeur{
+   margin-right: 5em;
+    margin-bottom: 2em;
+}
+.coeur{
+   border: none;
+   color: black;
+   font-size: 2em;
+   opacity: 1;
+   margin-right: 1em;
+   position: absolute;
+    
+}
+.heart{
+   opacity: 0.2;
+   color: white;
+   font-size: 2em;
+   position: absolute;
+   transform-origin:center;
+}
+
+ 
+ 
+ 
+
+.heart:hover{
+   color: #9356DC;
+  opacity:0.5;
+  transition: 500ms linear;              /*transition linéaire*/
+}
+
+
+.restaurant_description{             /* englobe la partie description des restaurants*/
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between; /* permet un espace entre le bouton et la descrption*/
+   align-items: center;         /* centre le bouton*/
+}
 .container_restaurant{
  border-radius: 20px;
     display: flex;
@@ -131,14 +224,20 @@ a{
     height: 260px;
     width: 360px;
 }
-.carte_1_titre{
-   color: black;
-   
-}
 
 .carte_1{
 
    background-color: #F2F2F2;
+}
+.carte_1_entree, .carte_1_plat{
+   
+    border: 3px solid #F2F2F2;
+    border-radius: 2em;
+    align-items: center;
+    padding-right: 2em;
+    margin-bottom: 2em;
+    
+    background-color: white;
 }
                               /* la note enchantÃ©e*/
 .carte_2{
@@ -149,9 +248,19 @@ a{
     height: 260px;
     width: 360px;
 }
-.carte_2_titre{
+.carte_titre{
    color: black;
 
+}
+.carte_entree, .carte_plat{
+   
+   border: 3px solid #F2F2F2;
+   border-radius: 2em;
+   align-items: center;
+   padding-right: 2em;
+   margin-bottom: 2em;
+   
+   background-color: white;
 }
 
                                /* La palette du goût*/
@@ -177,3 +286,5 @@ background-color: #F2F2F2;}
  .carte_4_titre{
 color: black;
 }
+
+ 
