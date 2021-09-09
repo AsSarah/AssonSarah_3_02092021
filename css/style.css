@@ -54,16 +54,18 @@ ol{
    display: flex;
 }
 .nombre{
+   color: white;
    line-height: 1em;
    border-radius: 50%;
-   height: 1em;
-   width: 1em;
+   height: 1.5em;
+   width: 1.5em;
    background-color: #9356DC;
    display: flex;
-   
    flex-wrap: wrap;
    align-content: center;
    justify-content: center;
+   position: relative;
+   left: 1em;
 }
 
 .liste{
@@ -86,24 +88,24 @@ ol{
 
 
 
-
+/*icones liste de fonctionnement*/
 
 .mobile{
    padding-right: 1em;
    color: grey;
-   padding-left: 1em;
+   padding-left: 2em;
 }
 
 .icone_list{
    padding-right: 1em;
    color: grey;
-   padding-left: 1em;
+   padding-left: 2em;
 }
 
 .store{
    padding-right: 1em;
    color: #9356DC;
-   padding-left: 1em;
+   padding-left: 2em;
 }
 
                 /* partie restaurant*/
@@ -119,7 +121,7 @@ ol{
    color:mediumseagreen;
    font-weight: bold;
 }
-
+                   /* favoris*/
 .icone_coeur{
    margin-right: 5em;
     margin-bottom: 2em;
@@ -128,28 +130,40 @@ ol{
    border: none;
    color: black;
    font-size: 2em;
-   opacity: 1;
+   opacity: 0.5;
    margin-right: 1em;
    position: absolute;
+   visibility: visible;
     
 }
-.heart{
-   opacity: 0.2;
-   color: white;
-   font-size: 2em;
-   position: absolute;
-   transform-origin:center;
+.coeur:active{
+   
+   opacity: 0;
+   
 }
 
- 
- 
- 
+.heart{
+   
+   position: absolute;
+   font-size: 2em;
+   opacity: 0;
+   margin-right: 1em;
+}
 
 .heart:hover{
-   color: #9356DC;
-  opacity:0.5;
-  transition: 500ms linear;              /*transition linéaire*/
+   cursor: pointer;
+   background: linear-gradient(
+      162deg
+      , #ff79da 20%, #9356dc 70%);
+     visibility: visible; 
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+  opacity:1;
+  transition: 1000ms linear;              /*transition linéaire*/
+  
 }
+
 
 
 .restaurant_description{             /* englobe la partie description des restaurants*/
@@ -225,24 +239,26 @@ a{
     width: 360px;
 }
 
-.carte_1{
+.carte{
 
    background-color: #F2F2F2;
+   border-radius: 2em;
+   margin-top: -4em;
+   position: relative;
 }
-.carte_1_entree, .carte_1_plat{
-   
-    border: 3px solid #F2F2F2;
-    border-radius: 2em;
-    align-items: center;
-    padding-right: 2em;
-    margin-bottom: 2em;
-    
-    background-color: white;
+
+
+
+.titre_categorie{
+   padding-left: 0.5em;
+}
+.prix{
+   position: relative;
+    margin-left: 17em;
+    margin-top: -1.5em;
 }
                               /* la note enchantÃ©e*/
-.carte_2{
-   background-color: #F2F2F2;
-}
+
 .img_carte_2{
    object-fit: cover;
     height: 260px;
@@ -250,41 +266,42 @@ a{
 }
 .carte_titre{
    color: black;
+   padding-top: 1em;
+    padding-left: 1em;
 
 }
 .carte_entree, .carte_plat{
-   
+   box-shadow: -1px 2px 5px 1px rgba(91,106,80,0.29),
+   -1px 2px 20px rgba(255, 255, 255, 0.6) inset; 
+   margin-right: 0.5em;
+    margin-left: 0.5em;
    border: 3px solid #F2F2F2;
-   border-radius: 2em;
+   border-radius: 1em;
    align-items: center;
-   padding-right: 2em;
    margin-bottom: 2em;
-   
+   padding-left: 1em;
    background-color: white;
+   line-height: 0.5;
 }
 
+
                                /* La palette du goût*/
-.carte_3{
-   background-color: #F2F2F2;
-}                               
+                    
 .img_carte_3{
    object-fit: cover;
     height: 260px;
     width: 360px;
 }
-.carte_3_titre{
-   color: black;
-}
+
                               /* Le délice des sens*/
-.carte_4{
-background-color: #F2F2F2;}                               
+                            
 .img_carte_4{
  object-fit: cover;
  height: 260px;
   width: 360px;
 }
- .carte_4_titre{
-color: black;
-}
+
+
+
 
  
