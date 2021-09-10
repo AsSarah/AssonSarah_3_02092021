@@ -2,6 +2,9 @@ body{
    margin: 0 0;
 
 }
+p{
+   font-size:0.9em;
+}
 header{
    display: flex;
    flex-direction: row;
@@ -104,7 +107,7 @@ ol{
    border: 3px solid #F2F2F2;
    border-radius: 2em;
    align-items: center;
-   padding-right: 1em;
+   padding-right: 2em;
    margin-bottom: 1em;
    font-weight: bold;
   
@@ -200,6 +203,11 @@ ol{
    flex-wrap: wrap;
    justify-content: space-between; /* permet un espace entre le bouton et la descrption*/
    align-items: center;         /* centre le bouton*/
+   padding-left: 0.5em;
+}
+
+.restaurant_description_1{
+   padding-left: 0.5em;
 }
 .container_restaurant{
  border-radius: 20px;
@@ -236,30 +244,7 @@ article{
    box-shadow : 5px 5px 8px rgba(170, 170, 170, 0.959)
 
 }
-                 /* Footer*/
 
-h1{
-   
-   font-size: medium;
-   color: white;
-
-}
-footer{
-   margin-top: 3em;
-   background-color: #000000;
-   display: flex;
-   flex-direction: column;
-}
-
-.lien_footer{
-   margin-bottom: 1em;
-   margin-left: 1em ;
-}
-a{
-
-   color: white;
-   text-decoration: none;
-}
 
 
                         /* Carte Ã  la franÃ§aise*/
@@ -295,8 +280,9 @@ a{
 }
 .prix{
    position: relative;
-    margin-left: 17em;
+    margin-left: 20em;
     margin-top: -1.5em;
+    
 }
                               /* la note enchantÃ©e*/
 
@@ -380,4 +366,31 @@ width: 380px;
 }
 
 
- 
+                  /* Footer*/
+
+h1{
+   
+   font-size: medium;
+   color: white;
+
+}
+footer{
+   margin-top: 3em;
+   background-color: #000000;
+   display: flex;
+   flex-direction: column;
+}
+.footer_link{
+   margin-left: 0.5em;
+}
+.lien_footer{
+
+   margin-left: 1em ;
+   display: flex;
+   align-items: center;
+}
+a{
+
+   color: white;
+   text-decoration: none;
+}
