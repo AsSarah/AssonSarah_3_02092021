@@ -286,7 +286,7 @@ article{
 }
                               /* la note enchantÃ©e*/
 
-.img_carte_2{
+.img_carte{
    object-fit: cover;
     height: 260px;
     width: 380px;
@@ -349,21 +349,9 @@ article{
 }
    
 
-                               /* La palette du goût*/
+                               
                     
-.img_carte_3{
-   object-fit: cover;
-   height: 260px;
-   width: 380px;
-}
 
-                              /* Le délice des sens*/
-                            
-.img_carte_4{
- object-fit: cover;
- height: 260px;
-width: 380px;
-}
 
 
                   /* Footer*/
@@ -393,4 +381,66 @@ a{
 
    color: white;
    text-decoration: none;
+}
+
+
+@media only screen and ( min-width: 750px) {
+   .img_carte{                                    /* redimension images cartes*/
+      object-fit: cover;
+      height: 30em;
+      width: 100%;
+     }
+     .carte{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-left: 4em;
+      margin-right: 4em;
+     }
+
+     .carte_1,.carte_2,.carte_3{
+        padding-right: 2em;
+     }
+
+    
+}
+
+@media only screen and ( min-width: 1020px){
+   .restaurant_img {
+      height: 390px;
+      width: 420px;
+      object-fit: cover;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+  }
+
+  ol{                                    /*liste partie fonctionnement*/
+      margin-top: 2em;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+}
+.titre_fonctionnement{
+   display: none;
+}
+}
+
+@media only screen and ( min-width: 1080px){
+   .restaurant_img {
+      height: 390px;
+      width: 320px;
+      object-fit: cover;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+  }
+.titre_fonctionnement{
+   display: none;
+}
+  ol{                                    /*liste partie fonctionnement*/
+     margin-top: 2em;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+  }
 }
