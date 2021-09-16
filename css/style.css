@@ -4,6 +4,11 @@ body{
 }
 p{
    font-size:0.9em;
+   font-family:bold, 'Roboto', sans-serif;
+}
+h3{
+   font-size: 1em;
+   font-family:bold, 'Roboto', sans-serif; 
 }
 header{
    display: flex;
@@ -11,6 +16,8 @@ header{
    justify-content: center;
    flex-wrap: wrap;
    align-items: center;
+   margin-bottom: 2em;
+   margin-top: 2em;
 }
 .logo_img{
    width: 200px;
@@ -40,30 +47,62 @@ header{
     align-items: center;
     background-color: #d9d7d7;
     justify-content: center;
+    
 }
 .adresse{ 
    margin-left: 1em;
-	
+	font-family: bold 'Roboto', sans-serif;
 }
 .Reservation{                          /* description*/
-	background-color: #F2F2F2;
+	background-color: #f6f6f6;
    text-align: center;
    padding-bottom: 3em;
 }
 
-.bouton{
+.bouton{                                       /* bouton commander */
 border-radius: 50px;
 border-style: none;
 font-size : 100%;
 line-height : 3.15;
 font-weight : bold;
-background: linear-gradient(175deg,#FF79DA 2%,#9356DC 160%,#9356DC 130% );
+background: linear-gradient(175deg,#FF79DA 2%,#9356DC 100%,#9356DC 90% );
 cursor: pointer;
 padding-top: 1em;
 padding-bottom: 1em;
 padding-left: 1em;
 padding-right: 1em;
 
+}
+
+.bouton:hover{
+   box-shadow : 5px 5px 8px rgba(170, 170, 170, 0.959);
+   opacity: 0.7;
+   
+}
+.commander{
+   display: flex;
+   justify-content: center;
+    flex-wrap: wrap;
+    background-color: #F2F2F2;
+}
+.bouton_commande{
+   border-radius: 50px;
+   border-style: none;
+   font-size: 100%;
+   line-height: 3.15;
+   font-weight: bold;
+   background: linear-gradient(175deg,#FF79DA 2%,#9356DC 100%,#9356DC 90% );
+   cursor: pointer;
+  
+   padding-left: 1em;
+   padding-right: 1em;
+   
+}
+
+.bouton_commande:hover{
+   box-shadow : 5px 5px 8px rgba(170, 170, 170, 0.959);
+   opacity: 0.7;
+   
 }
 
 
@@ -76,17 +115,18 @@ h2{
    font-family: 'Roboto', sans-serif;
   
 }
-ol{
+
+.fonctionnement_liste{
    display: flex;
-   line-height: 3.15em;
-   flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-right: 1em;
   
 }
-.liste_nombre{
-   display: flex;
-}
 .nombre{
-   color: white;
+   
+      color: white;
    line-height: 1em;
    border-radius: 50%;
    height: 1.5em;
@@ -97,25 +137,31 @@ ol{
    align-content: center;
    justify-content: center;
    position: relative;
-   left: 1em;
+   right: 1em;
 }
 
-.liste{
-   background-color: #F2F2F2;
+.liste_nombre{
    display: flex;
-   
-   border: 3px solid #F2F2F2;
-   border-radius: 2em;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-content: center;
+   /* justify-content: center; */
    align-items: center;
+   background-color: #F2F2F2;
+   border: 3px solid #F2F2F2;
+
+   border-radius: 2em;
+   margin-left: 2em;
    padding-right: 2em;
    margin-bottom: 1em;
    font-weight: bold;
-  
-
 }
 
-.liste:hover{
-   background:RGBA(235,211,255,0.47);
+
+
+.liste_nombre:hover{
+   color: #9356DC;
+   background-color:#f5e6f7;
 }
 
 
@@ -124,19 +170,21 @@ ol{
 
 .mobile{
    padding-right: 1em;
-   color: grey;
+   
    padding-left: 2em;
 }
 
+
+
 .icone_list{
    padding-right: 1em;
-   color: grey;
+  
    padding-left: 2em;
 }
 
 .store{
    padding-right: 1em;
-   color: #9356DC;
+   
    padding-left: 2em;
 }
 
@@ -230,7 +278,13 @@ ol{
 p{
    font-family: 'Roboto', sans-serif;
 }
-
+.carte_repas{
+   display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
 article{
 	line-height: 2px;
 	padding-left: 5px;
@@ -241,7 +295,7 @@ article{
    border-radius : 20px;
    background-color : white;
    margin-bottom: 1em;
-   box-shadow : 5px 5px 8px rgba(170, 170, 170, 0.959)
+   box-shadow : 5px 5px 8px rgba(170, 170, 170, 0.959);
 
 }
 
@@ -249,11 +303,7 @@ article{
 
                         /* Carte Ã  la franÃ§aise*/
 
-.img_carte_1{
-  background-color: white;
-    height: 260px;
-    width: 360px;
-}
+
 .titre{                 /*titre des cartes*/
    display: flex;
     flex-direction: row;
@@ -263,7 +313,7 @@ article{
     margin-right: 1em;
 }
 .carte{
-
+   
    background-color: #F2F2F2;
    border-radius: 2em;
    margin-top: -4em;
@@ -271,6 +321,7 @@ article{
    
  
 }
+
 
 
 .titre_categorie{
@@ -282,14 +333,15 @@ article{
    position: relative;
     margin-left: 20em;
     margin-top: -1.5em;
+    font-weight: 600;
     
 }
                               /* la note enchantÃ©e*/
 
 .img_carte{
    object-fit: cover;
-    height: 260px;
-    width: 380px;
+   height: 20em;
+   width: 100%;
 }
 .carte_titre{
    color: black;
@@ -297,6 +349,7 @@ article{
     padding-left: 1em;
     font-family: 'Shrikhand', cursive;
     font-size: large;
+    font-size: 1.5em;
 
 }
 .carte_1, .carte_2,.carte_3{
@@ -320,6 +373,22 @@ article{
    overflow: hidden;
    position: relative;
    animation-direction:alternate-reverse ;
+}
+
+.carte_1:hover{
+   transform: scale(1);
+   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7); 
+   cursor: pointer;
+}
+.carte_2:hover{
+   transform: scale(1);
+   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7); 
+   cursor: pointer;
+}
+.carte_3:hover{
+  transform: scale(1);
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7); 
+   cursor: pointer;
 }
 
 
@@ -349,7 +418,33 @@ article{
 }
    
 
-                               
+.box{                      /*bouton validé */
+   padding-right: 0px;
+    margin-right: 10em;
+    margin-left: 10em;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2em;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.box:hover{
+   background-color: green;
+}
+
+.icone{
+       color: white;
+  
+}
+
+                   
                     
 
 
@@ -364,7 +459,7 @@ h1{
 }
 footer{
    margin-top: 3em;
-   background-color: #000000;
+   background-color: #353535;
    display: flex;
    flex-direction: column;
 }
@@ -384,6 +479,8 @@ a{
 }
 
 
+
+
 @media only screen and ( min-width: 750px) {
    .img_carte{                                    /* redimension images cartes*/
       object-fit: cover;
@@ -395,15 +492,16 @@ a{
       flex-direction: column;
       flex-wrap: wrap;
       align-items: center;
-      margin-left: 4em;
-      margin-right: 4em;
+     
      }
 
      .carte_1,.carte_2,.carte_3{
         padding-right: 2em;
      }
+  
 
-    
+
+   
 }
 
 @media only screen and ( min-width: 1020px){
@@ -425,11 +523,11 @@ a{
    display: none;
 }
 }
-
+                                          /* responsive pc*/
 @media only screen and ( min-width: 1080px){
    .restaurant_img {
-      height: 390px;
-      width: 320px;
+      height: 300px;
+      width: 350px;
       object-fit: cover;
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
@@ -437,10 +535,51 @@ a{
 .titre_fonctionnement{
    display: none;
 }
-  ol{                                    /*liste partie fonctionnement*/
-     margin-top: 2em;
+
+.fonctionnement_liste {
    display: flex;
    flex-direction: row;
-   justify-content: center;
-  }
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   margin-right: 1em;
+}
+.presentation_carte{
+   display: flex;
+}
+.carte{
+   display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    align-content: center;
+}
+
+.Entrees{
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 3em;
+   margin-top: 7em;
+   padding-right: 2em;
+}
+
+.Plats{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-evenly;
+   margin-top: 7em;
+   padding-right: 2em;
+}
+
+.Desserts{
+   display: flex;
+   flex-direction: column;
+   margin-top: 7em;
+    align-items: center;
+}
+
+
 }
