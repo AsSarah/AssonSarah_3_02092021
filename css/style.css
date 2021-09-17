@@ -1,7 +1,10 @@
 body{
    margin: 0 0;
-
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
 }
+
 p{
    font-size:0.9em;
    font-family:bold, 'Roboto', sans-serif;
@@ -10,6 +13,114 @@ h3{
    font-size: 1em;
    font-family:bold, 'Roboto', sans-serif; 
 }
+                           /* loading spinner box*/
+.box_spinner{
+  background: white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:Box 3000ms ease-in-out;
+    animation-fill-mode: both;
+   
+}
+@keyframes Box{
+   0%{
+      opacity: 1;
+      visibility: visible;
+   }
+   50%{
+      opacity: 1;
+   }
+   100%{
+      opacity: 0;
+      visibility: hidden;
+   }
+  }
+.spinner{
+   height: 100px;
+   width: 100px;
+   display: block;
+  position: fixed;
+  z-index: 1031; 
+  top: 50%;
+  right: 34%; 
+  
+animation: Spin 2s 3s ease-in-out;
+ animation-fill-mode: both
+
+}
+@keyframes Spin{
+  0% {
+  
+   transform: scale(1.2);
+   opacity:  2;
+}
+30%{
+   
+   transform: scale(1.2);
+   
+
+}
+50%{
+   
+
+   animation-delay: 2s;
+   transform: scale(1.2);
+   
+}
+100%{
+   animation-delay: 2s;
+   transform: scale(1.2);
+   opacity: 2;
+}
+}
+.spinner div {
+  
+
+   box-sizing: border-box;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border: 8px solid transparent;
+   border-top-color: #9356dc;
+   border-radius: 100% ;    /* arrondie notre trait */
+   animation: spinnerOne 1.3s linear infinite ;
+
+
+
+}  
+.spinner div:nth-child(2){
+   border: 8px solid transparent;
+   border-bottom-color: #FF79DA ;
+
+}
+.spinner2{
+   width: 1em;
+   height: 1em;
+   position: relative;
+
+}
+.spinner2 div:nth-child(1){
+   border: 8px solid transparent;
+   border-right-color: #99E2D0 ;
+
+
+}
+@keyframes spinnerOne{
+
+   0% {transform: rotate(0deg); border-width: 10px; }
+    30% {transform: rotate(150deg); border-width: 1px;}
+     50% {transform: rotate(250deg); border-width: 5px;}
+      100% 
+         {transform: rotate(360deg); border-width: 10px;}
+
+}
+  
 header{
    display: flex;
    flex-direction: row;
@@ -298,6 +409,11 @@ article{
    box-shadow : 5px 5px 8px rgba(170, 170, 170, 0.959);
 
 }
+.restaurant:hover{
+   transform: scale(1);
+   box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.7); 
+   cursor: pointer;
+}
 
 
 
@@ -321,6 +437,7 @@ article{
    
  
 }
+
 
 
 
@@ -580,6 +697,9 @@ a{
    margin-top: 7em;
     align-items: center;
 }
-
+.spinner{
+   top: 40%;
+   right: 45%; 
+}
 
 }
