@@ -356,7 +356,7 @@ h2{
 
 
 
-
+                                        /* partie restaurants*/
 
 .restaurant_description{             /* englobe la partie description des restaurants*/
    display: flex;
@@ -396,7 +396,7 @@ p{
    flex-wrap: wrap;
    align-items: flex-start;
    flex-direction: row;
-   /* margin-left: 1em; */
+   margin-left: 0.6em; 
 }
 article{
 	line-height: 2px;
@@ -411,7 +411,7 @@ article{
    box-shadow : 5px 5px 8px rgba(170, 170, 170, 0.959);
 
 }
-.restaurant:hover{
+.restaurant:hover{                  /* effet de survol*/
    transform: scale(1);
    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.7); 
    cursor: pointer;
@@ -473,21 +473,21 @@ article{
 
 }
 
- .carte_1:hover .descript_plats{                    /* englobe les descriptions longues*/
+ .carte_1:hover .descript_plats{                    /* masque les descriptions longues*/
    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: inline-block;
     width: calc(80%);
  }
- .carte_2:hover .descript_plats{                    /* englobe les descriptions longues*/
+ .carte_2:hover .descript_plats{                    /* masque les descriptions longues*/
    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: inline-block;
     width: calc(80%);
  }
- .carte_3:hover .descript_plats{                    /* englobe les descriptions longues*/
+ .carte_3:hover .descript_plats{                    /* masque les descriptions longues*/
    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -517,7 +517,7 @@ article{
    animation-direction:alternate-reverse ;
    text-overflow: ellipsis;
 }
-
+                                       /* animation des plats*/
 .carte_1:hover{
    transform: scale(1);
    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7); 
@@ -561,7 +561,7 @@ article{
 } 
    
 
-                                   /* animation checkbox*/
+                                   /* animation checkbox ( valider)*/
                                     /* carte 1 */
 
 .carte_1:before{
@@ -610,8 +610,10 @@ article{
    border-radius: 50%;
    transform: rotate(180deg);
    transition-duration: .5s;
-   margin-bottom: 1em;
-   margin-right: 1em;
+   margin-bottom: 2em;
+   margin-right: 1.8em;
+   margin-left: 1em;
+   
 }
 .carte_1:hover  .icone {
   transform: rotate(360deg);
@@ -620,18 +622,18 @@ article{
   color: #99e2d0;
 } 
 
-
+                                       /* partie carte_2*/
 .carte_2:before{
    opacity: 1;
      text-indent: 0px;
 }
 .carte_2:hover  .prix {
-   text-indent: -10px;
+   text-indent: -65px;
    text-overflow: ellipsis;
    
 }
 .carte_2:hover .check_box{
-   transform: translateX(-60px);
+   transform: translateX(-130px);
 }
 
 .carte_2:hover  .icone {
@@ -710,9 +712,7 @@ a{
      
      } 
 
-     .carte_1,.carte_2,.carte_3{
-        padding-right: 3em;
-     }
+     
   
      .spinner {
       height: 100px;
@@ -724,6 +724,7 @@ a{
       right: 40%;
       animation: Spin 2s 3s ease-in-out;
       animation-fill-mode: both;
+      
    }
 
 
@@ -740,7 +741,13 @@ a{
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
   }
+  .carte_1, .carte_2, .carte_3 {
+   padding-right: 3em;
+}
 
+.carte_repas{
+   margin-left: 4em;
+}
  
 .titre_fonctionnement{
    display: none;
@@ -814,3 +821,361 @@ a{
 
 }
  
+
+@media only screen and (max-width: 601px){
+   .carte_1:before{
+   opacity: 1;
+     text-indent: 0px;
+}
+.carte_1:hover .prix {
+   text-indent: -70px;
+   
+   
+}
+
+
+ .carte_1:hover .check_box{
+   transform: translateX(-130px);
+   
+} 
+.check_box {
+   padding-right: 0px;
+   margin-left: 10em;
+   display: flex;
+  background-color: #99E2D0;
+   flex-wrap: wrap;
+   height: 100px;
+   width: 70px;
+   justify-content: center;
+   align-items: center;
+   margin-right: 2em;
+   position: absolute;
+   top: 0;
+   left: 10em; 
+   transition: transform 330ms ease-in-out;
+   /*transition: transform 330ms ease-in-out;*/
+   margin-left: 15em;
+   border-bottom-right-radius: 20px;
+   border-top-right-radius: 20px;
+}
+
+.icone{
+  height: 1.6rem;
+   width: 1.6rem;
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   border-radius: 50%;
+   transform: rotate(0deg);
+   transition-duration: .5s;
+       margin-bottom: 2em;
+    margin-right: 1.8em;
+    margin-left: 1em;
+}
+.carte_1:hover  .icone {
+ transform: rotate(360deg);
+}
+.check{
+  color: #99e2d0;
+} 
+
+                                       /* partie carte_2*/
+.carte_2:before{
+   opacity: 1;
+     text-indent: 0px;
+}
+.carte_2:hover  .prix {
+   text-indent: -65px;
+   text-overflow: ellipsis;
+   
+}
+.carte_2:hover .check_box{
+   transform: translateX(-130px);
+}
+
+.carte_2:hover  .icone {
+   transform: rotate(360deg);
+ }
+
+                              /* Carte 3 animation */
+  .carte_3:before{
+   opacity: 1;
+     text-indent: 0px;
+}
+.carte_3:hover .prix {
+   text-indent: -65px;
+   text-overflow: ellipsis;
+}
+.carte_3:hover .check_box{
+   transform: translateX(-130px);
+}
+
+.carte_3:hover  .icone {
+   transform: rotate(360deg);
+ } 
+ .carte_1:hover .descript_plats{                    /* masque les descriptions longues*/
+   white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: calc(68%);
+ }
+ .carte_2:hover .descript_plats{                    /* masque les descriptions longues*/
+   white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: calc(80%);
+ }
+ .carte_3:hover .descript_plats{  
+
+   white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: calc(69%);
+ }
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+   .carte_repas{
+      margin-left: 2em;
+   }
+      .carte_1:before{
+   opacity: 1;
+     text-indent: 0px;
+}
+.carte_1:hover .prix {
+   text-indent: -70px;
+   
+   
+}
+
+
+ .carte_1:hover .check_box{
+   transform: translateX(-130px);
+   
+} 
+.check_box {
+   padding-right: 0px;
+   margin-left: 10em;
+   display: flex;
+  background-color: #99E2D0;
+   flex-wrap: wrap;
+   height: 100px;
+   width: 70px;
+   justify-content: center;
+   align-items: center;
+   margin-right: 2em;
+   position: absolute;
+   top: 0;
+   left: 10em; 
+   transition: transform 330ms ease-in-out;
+   /*transition: transform 330ms ease-in-out;*/
+   margin-left: 15em;
+   border-bottom-right-radius: 20px;
+   border-top-right-radius: 20px;
+}
+
+.icone{
+  height: 1.6rem;
+   width: 1.6rem;
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   border-radius: 50%;
+   transform: rotate(0deg);
+transition-duration: .5s;
+       margin-bottom: 2em;
+    margin-right: 1.8em;
+    margin-left: 1em;
+}
+.carte_1:hover  .icone {
+ transform: rotate(360deg);
+}
+.check{
+  color: #99e2d0;
+} 
+
+                                       /* partie carte_2*/
+.carte_2:before{
+   opacity: 1;
+     text-indent: 0px;
+}
+.carte_2:hover  .prix {
+   text-indent: -65px;
+   text-overflow: ellipsis;
+   
+}
+.carte_2:hover .check_box{
+   transform: translateX(-130px);
+}
+
+.carte_2:hover  .icone {
+   transform: rotate(360deg);
+ }
+
+                              /* Carte 3 animation */
+  .carte_3:before{
+   opacity: 1;
+     text-indent: 0px;
+}
+.carte_3:hover .prix {
+   text-indent: -65px;
+   text-overflow: ellipsis;
+}
+.carte_3:hover .check_box{
+   transform: translateX(-130px);
+}
+
+.carte_3:hover  .icone {
+   transform: rotate(360deg);
+ } 
+ .carte_1:hover .descript_plats{                    /* masque les descriptions longues*/
+   white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: calc(66%);
+ }
+ .carte_2:hover .descript_plats{                    /* masque les descriptions longues*/
+   white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: calc(80%);
+ }
+ .carte_3:hover .descript_plats{  
+
+   white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: calc(69%);
+ }
+}
+
+                                                   /* animation valider pour ipad pro */
+@media only screen and (min-width:1024px){
+         .carte_1:before{
+   opacity: 1;
+     text-indent: 0px;
+}
+.carte_1:hover .prix {
+   text-indent: -25px;
+   
+   
+}
+
+
+ .carte_1:hover .check_box{
+   transform: translateX(-90px);
+   
+} 
+.check_box {
+   padding-right: 0px;
+   margin-left: 10em;
+   display: flex;
+  background-color: #99E2D0;
+   flex-wrap: wrap;
+   height: 100px;
+   width: 70px;
+   justify-content: center;
+   align-items: center;
+   margin-right: 2em;
+   position: absolute;
+   top: 0;
+   left: 10em; 
+   transition: transform 330ms ease-in-out;
+   /*transition: transform 330ms ease-in-out;*/
+   margin-left: 15em;
+   border-bottom-right-radius: 20px;
+   border-top-right-radius: 20px;
+}
+
+.icone{
+  height: 1.6rem;
+   width: 1.6rem;
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   border-radius: 50%;
+   transform: rotate(0deg);
+   transition-duration: .5s;
+       margin-bottom: 2em;
+    margin-right: 1.8em;
+    margin-left: 1em;
+}
+.carte_1:hover  .icone {
+ transform: rotate(360deg);
+}
+.check{
+  color: #99e2d0;
+} 
+
+                                       /* partie carte_2*/
+.carte_2:before{
+   opacity: 1;
+     text-indent: 0px;
+}
+.carte_2:hover  .prix {
+   text-indent: -25px;
+   text-overflow: ellipsis;
+   
+}
+.carte_2:hover .check_box{
+   transform: translateX(-90px);
+}
+
+.carte_2:hover  .icone {
+   transform: rotate(360deg);
+ }
+
+                              /* Carte 3 animation */
+  .carte_3:before{
+   opacity: 1;
+     text-indent: 0px;
+}
+.carte_3:hover .prix {
+   text-indent: -25px;
+   text-overflow: ellipsis;
+}
+.carte_3:hover .check_box{
+   transform: translateX(-90px);
+}
+
+.carte_3:hover  .icone {
+   transform: rotate(360deg);
+ } 
+ .carte_1:hover .descript_plats{                    /* masque les descriptions longues*/
+   white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: calc(80%);
+ }
+ .carte_2:hover .descript_plats{                    /* masque les descriptions longues*/
+   white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: calc(80%);
+ }
+ .carte_3:hover .descript_plats{  
+
+   white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: calc(69%);
+ }
+}
