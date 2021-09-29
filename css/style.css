@@ -5,15 +5,27 @@ body{
    flex-wrap: wrap;
 }
 
-p{
-   
+ p{
+   text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
    font-size:0.9em;
    font-family:bold, 'Roboto', sans-serif;
-   
+   margin-top: 0em;
+   font-weight: 100;
+   margin-bottom: 0px;
 }
 h3{
-   font-size: 1em;
+   font-size: 0.9em;
    font-family:bold, 'Roboto', sans-serif; 
+   text-overflow: ellipsis;
+   overflow: hidden;
+   white-space: nowrap;
+       padding-top: 0.5em;
+       margin-bottom: 0px;
+    padding-bottom: 1em;
 }
                            /* loading spinner box*/
 .box_spinner{
@@ -197,6 +209,7 @@ padding-right: 1em;
    justify-content: center;
     flex-wrap: wrap;
     background-color: #F2F2F2;
+    padding-bottom: 3em;
 }
 .bouton_commande{
    border-radius: 50px;
@@ -231,15 +244,15 @@ h2{
 
 .fonctionnement_liste{
    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-right: 1em;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin-right: 1em;
   
 }
 .nombre{
    
-      color: white;
+   color: white;
    line-height: 1em;
    border-radius: 50%;
    height: 1.5em;
@@ -262,12 +275,13 @@ h2{
    align-items: center;
    background-color: #F2F2F2;
    border: 3px solid #F2F2F2;
-
+   padding-top: 0.5em;
    border-radius: 2em;
    margin-left: 2em;
    padding-right: 2em;
    margin-bottom: 1em;
    font-weight: bold;
+   margin-right: 2em;
 }
 
 
@@ -284,7 +298,7 @@ h2{
 .mobile{
    padding-right: 1em;
    
-   padding-left: 2em;
+   
 }
 
 
@@ -292,13 +306,13 @@ h2{
 .icone_list{
    padding-right: 1em;
   
-   padding-left: 2em;
+ 
 }
 
 .store{
    padding-right: 1em;
    
-   padding-left: 2em;
+ 
 }
 
                 /* partie restaurant*/
@@ -400,7 +414,7 @@ p{
 }
 article{
 	line-height: 2px;
-	padding-left: 5px;
+	
 }
 
 .restaurant{
@@ -433,7 +447,8 @@ article{
 .carte{
    
    background-color: #F2F2F2;
-   border-radius: 2em;
+   border-top-left-radius: 2em;
+   border-top-right-radius: 2em;
    margin-top: -4em;
    position: relative;
    
@@ -446,14 +461,30 @@ article{
 .titre_categorie{
    padding-left: 0.5em;
    font-family: 'Roboto', sans-serif;
+   position: relative;
+   margin-bottom: 1em;
    
 }
+.titre_categorie::after{                                      /* barre verte sous titre cartes*/
+   
+   content: "";
+   width: 4em;
+   height: 0.3em;
+   background-color: #99e2d0;
+   position: absolute;
+   bottom: 0em;
+   left: 0;
+   
+   
+}
+
 .prix{
    position: relative;
     margin-left: 20em;
     margin-top: -1.5em;
-    font-weight: 600;
-    
+    font-weight: 800;
+    box-sizing: border-box;
+    padding-left: 2em;
     
 }
                               /* la note enchantÃ©e*/
@@ -478,7 +509,7 @@ article{
     overflow: hidden;
     text-overflow: ellipsis;
     display: inline-block;
-    width: calc(80%);
+    width: calc(70%);
  }
  .carte_2:hover .descript_plats{                    /* masque les descriptions longues*/
    white-space: nowrap;
@@ -498,12 +529,12 @@ article{
    box-shadow: -1px 2px 5px 1px rgb(91 106 80 / 29%), -1px 2px 20px rgb(255 255 255 / 60%) inset; /*inset= introduire*/
    margin-right: 0.5em; 
    margin-left: 0.5em; 
-   border: 3px solid #F2F2F2;
+  
    border-radius: 1em;
    margin-bottom: 2em;
    padding-left: 1em; 
    background-color: white;
-   line-height: 0.5;
+   line-height: 0;
    display: flex;
    flex-direction: column;
    flex-wrap: wrap;
@@ -515,7 +546,8 @@ article{
    overflow: hidden;
    position: relative;
    animation-direction:alternate-reverse ;
-   text-overflow: ellipsis;
+
+  
 }
                                        /* animation des plats*/
 .carte_1:hover{
@@ -568,7 +600,7 @@ article{
    opacity: 1;
      text-indent: 0px;
 }
-.carte_1:hover .prix {
+.carte_1:hover .prix{
    text-indent: -10px;
    
    
@@ -576,7 +608,7 @@ article{
 
 
  .carte_1:hover .check_box{
-   transform: translateX(-60px);
+   transform: translateX(-100px);
    
 } 
 .check_box {
@@ -592,7 +624,8 @@ article{
    margin-right: 2em;
    position: absolute;
    top: 0;
-   left: 9em; 
+   left: 10em; 
+   margin-left: 0px;
    transition: transform 330ms ease-in-out;
    margin-left: 15em;
    border-bottom-right-radius: 20px;
@@ -633,7 +666,7 @@ article{
    
 }
 .carte_2:hover .check_box{
-   transform: translateX(-130px);
+   transform: translateX(-70px);
 }
 
 .carte_2:hover  .icone {
@@ -669,9 +702,11 @@ article{
 
 h1{
    
-   font-size: medium;
+   font-size: large;
    color: white;
-
+   font-family: 'Shrikhand', cursive;
+    margin-left: 1em;
+    font-weight: 100;
 }
 footer{
    margin-top: 3em;
@@ -687,6 +722,7 @@ footer{
    margin-left: 1em ;
    display: flex;
    align-items: center;
+   font-family:bold, 'Roboto', sans-serif; 
 }
 a{
 
@@ -767,13 +803,7 @@ a{
    display: none;
 }
 
-.fonctionnement_liste {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   justify-content: space-evenly;
-   margin-right: 1em;
-}
+
 .presentation_carte{
    display: flex;
 }
@@ -819,23 +849,42 @@ a{
    right: 45%; 
 }
 
+footer{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   padding-bottom: 3em;
+    padding-top: 3em;
+}
+
 }
  
 
 @media only screen and (max-width: 601px){
+   .fonctionnement_liste {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin-right: 1em;
+   }
+   
    .carte_1:before{
    opacity: 1;
      text-indent: 0px;
 }
 .carte_1:hover .prix {
-   text-indent: -70px;
+   text-indent: -50px;
    
    
 }
 
-
+.carte_1,.carte_2,.carte_3{
+   padding-right: 1em;
+}
  .carte_1:hover .check_box{
-   transform: translateX(-130px);
+   transform: translateX(-120px);
    
 } 
 .check_box {
@@ -887,12 +936,12 @@ a{
      text-indent: 0px;
 }
 .carte_2:hover  .prix {
-   text-indent: -65px;
+   text-indent: -50px;
    text-overflow: ellipsis;
    
 }
 .carte_2:hover .check_box{
-   transform: translateX(-130px);
+   transform: translateX(-120px);
 }
 
 .carte_2:hover  .icone {
@@ -905,38 +954,17 @@ a{
      text-indent: 0px;
 }
 .carte_3:hover .prix {
-   text-indent: -65px;
+   text-indent: -50px;
    text-overflow: ellipsis;
 }
 .carte_3:hover .check_box{
-   transform: translateX(-130px);
+   transform: translateX(-120px);
 }
 
 .carte_3:hover  .icone {
    transform: rotate(360deg);
  } 
- .carte_1:hover .descript_plats{                    /* masque les descriptions longues*/
-   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    width: calc(68%);
- }
- .carte_2:hover .descript_plats{                    /* masque les descriptions longues*/
-   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    width: calc(80%);
- }
- .carte_3:hover .descript_plats{  
 
-   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    width: calc(69%);
- }
 
 
 }
@@ -976,7 +1004,7 @@ a{
    top: 0;
    left: 10em; 
    transition: transform 330ms ease-in-out;
-   /*transition: transform 330ms ease-in-out;*/
+  
    margin-left: 15em;
    border-bottom-right-radius: 20px;
    border-top-right-radius: 20px;
@@ -1038,28 +1066,7 @@ transition-duration: .5s;
 .carte_3:hover  .icone {
    transform: rotate(360deg);
  } 
- .carte_1:hover .descript_plats{                    /* masque les descriptions longues*/
-   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    width: calc(66%);
- }
- .carte_2:hover .descript_plats{                    /* masque les descriptions longues*/
-   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    width: calc(80%);
- }
- .carte_3:hover .descript_plats{  
 
-   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    width: calc(69%);
- }
 }
 
                                                    /* animation valider pour ipad pro */
@@ -1094,7 +1101,7 @@ transition-duration: .5s;
    top: 0;
    left: 10em; 
    transition: transform 330ms ease-in-out;
-   /*transition: transform 330ms ease-in-out;*/
+   
    margin-left: 15em;
    border-bottom-right-radius: 20px;
    border-top-right-radius: 20px;
@@ -1129,7 +1136,7 @@ transition-duration: .5s;
 }
 .carte_2:hover  .prix {
    text-indent: -25px;
-   text-overflow: ellipsis;
+ 
    
 }
 .carte_2:hover .check_box{
@@ -1147,7 +1154,7 @@ transition-duration: .5s;
 }
 .carte_3:hover .prix {
    text-indent: -25px;
-   text-overflow: ellipsis;
+   
 }
 .carte_3:hover .check_box{
    transform: translateX(-90px);
@@ -1156,26 +1163,9 @@ transition-duration: .5s;
 .carte_3:hover  .icone {
    transform: rotate(360deg);
  } 
- .carte_1:hover .descript_plats{                    /* masque les descriptions longues*/
-   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    width: calc(80%);
- }
- .carte_2:hover .descript_plats{                    /* masque les descriptions longues*/
-   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    width: calc(80%);
- }
- .carte_3:hover .descript_plats{  
 
-   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    width: calc(69%);
- }
 }
+
+
+
+   
