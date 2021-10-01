@@ -510,7 +510,7 @@ article{
  }
  .carte_2:hover .descript_plats{                    /* masque les descriptions longues*/
   
-    width:13em;
+    width: 13em;
  }
  .carte_3:hover .descript_plats{                    /* masque les descriptions longues*/
   
@@ -726,7 +726,11 @@ a{
 
 
 @media only screen and ( min-width: 750px) {
-
+   .carte_repas{
+      margin-left: 2em;
+      margin-right: 2em;
+      justify-content: space-between;
+   }
    .img_carte{                                    /* redimension images cartes*/
       object-fit: cover;
       height: 30em;
@@ -776,7 +780,8 @@ a{
 }
 
 .carte_repas{
-   margin-left: 4em;
+   
+   justify-content: space-between;
 }
  
 .titre_fonctionnement{
@@ -968,9 +973,7 @@ footer{
 
 @media only screen and (min-width: 768px) {
 
-   .carte_repas{
-      margin-left: 2em;
-   }
+  
       .carte_1:before{
    opacity: 1;
      text-indent: 0px;
