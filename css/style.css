@@ -12,7 +12,7 @@ body{
     padding-top: 0.5em;
     padding-bottom: 1em;
    font-size:0.9em;
-   font-family:bold, 'Roboto', sans-serif;
+   font-family: 'Roboto', sans-serif;
    margin-top: 0em;
    font-weight: 100;
    margin-bottom: 0px;
@@ -189,13 +189,14 @@ border-radius: 50px;
 border-style: none;
 font-size : 100%;
 line-height : 3.15;
-font-weight : bold;
+font-family: 'Roboto', sans-serif;
 background: linear-gradient(175deg,#FF79DA 2%,#9356DC 100%,#9356DC 90% );
 cursor: pointer;
 padding-top: 1em;
 padding-bottom: 1em;
 padding-left: 1em;
 padding-right: 1em;
+font-weight: 100;
 
 }
 
@@ -209,7 +210,8 @@ padding-right: 1em;
    justify-content: center;
     flex-wrap: wrap;
     background-color: #F2F2F2;
-    padding-bottom: 3em;
+    padding-bottom: 5em;
+    padding-top: 1.5em;
 }
 .bouton_commande{
    border-radius: 50px;
@@ -220,8 +222,8 @@ padding-right: 1em;
    background: linear-gradient(175deg,#FF79DA 2%,#9356DC 100%,#9356DC 90% );
    cursor: pointer;
   
-   padding-left: 1em;
-   padding-right: 1em;
+   padding-left: 3em;
+   padding-right: 3em;
    
 }
 
@@ -390,7 +392,7 @@ h2{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-right: 1em;
+    
  
 }
 
@@ -402,9 +404,7 @@ h2{
 	border-top-right-radius: 20px;
 }
 
-p{
-   font-family: 'Roboto', sans-serif;
-}
+
 .carte_repas{
    display: flex;
    flex-wrap: wrap;
@@ -433,7 +433,7 @@ article{
 
 
 
-                        /* Carte Ã  la franÃ§aise*/
+                        /* Carte Ã  la franÃ§aise*/
 
 
 .titre{                 /*titre des cartes*/
@@ -505,25 +505,16 @@ article{
 }
 
  .carte_1:hover .descript_plats{                    /* masque les descriptions longues*/
-   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    width: calc(70%);
+  
+    width: 13em;
  }
  .carte_2:hover .descript_plats{                    /* masque les descriptions longues*/
-   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    width: calc(80%);
+  
+    width:13em;
  }
  .carte_3:hover .descript_plats{                    /* masque les descriptions longues*/
-   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    width: calc(80%);
+  
+    width: 13em;
  }
 .carte_1, .carte_2,.carte_3{
    box-shadow: -1px 2px 5px 1px rgb(91 106 80 / 29%), -1px 2px 20px rgb(255 255 255 / 60%) inset; /*inset= introduire*/
@@ -531,7 +522,7 @@ article{
    margin-left: 0.5em; 
   
    border-radius: 1em;
-   margin-bottom: 2em;
+   margin-bottom: 1.2em;
    padding-left: 1em; 
    background-color: white;
    line-height: 0;
@@ -709,7 +700,7 @@ h1{
     font-weight: 100;
 }
 footer{
-   margin-top: 3em;
+   
    background-color: #353535;
    display: flex;
    flex-direction: column;
@@ -725,9 +716,10 @@ footer{
    font-family:bold, 'Roboto', sans-serif; 
 }
 a{
-
+   font-family:  'Roboto', sans-serif;
    color: white;
    text-decoration: none;
+
 }
 
 
@@ -764,7 +756,9 @@ a{
    }
 
 
-
+.carte_1,.carte_2,.carte_3{
+   margin-right: 0px;
+}
 
    
 }
@@ -792,6 +786,9 @@ a{
 }
                                           /* responsive pc*/
 @media only screen and ( min-width: 1080px){
+   .logo_img {
+      width: 400px;
+  }
    .restaurant_img {
       height: 300px;
       width: 350px;
@@ -875,7 +872,7 @@ footer{
      text-indent: 0px;
 }
 .carte_1:hover .prix {
-   text-indent: -50px;
+   text-indent: -70px;
    
    
 }
@@ -936,7 +933,7 @@ footer{
      text-indent: 0px;
 }
 .carte_2:hover  .prix {
-   text-indent: -50px;
+   text-indent: -70px;
    text-overflow: ellipsis;
    
 }
@@ -954,7 +951,7 @@ footer{
      text-indent: 0px;
 }
 .carte_3:hover .prix {
-   text-indent: -50px;
+   text-indent: -70px;
    text-overflow: ellipsis;
 }
 .carte_3:hover .check_box{
@@ -1165,7 +1162,3 @@ transition-duration: .5s;
  } 
 
 }
-
-
-
-   
