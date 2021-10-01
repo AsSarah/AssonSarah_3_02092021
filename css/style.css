@@ -782,7 +782,7 @@ a{
    
 }
 
-@media only screen and ( max-height: 1020px){
+@media only screen and ( min-width: 1020px){
    .restaurant_img {
       height: 390px;
       width: 420px;
