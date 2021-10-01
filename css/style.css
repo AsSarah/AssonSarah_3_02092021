@@ -782,10 +782,10 @@ a{
    
 }
 
-@media  screen and ( max-height: 1370px){
+@media only screen and ( max-height: 1020px){
    .restaurant_img {
-      height: 200px;
-      width: 350px;
+      height: 390px;
+      width: 420px;
       object-fit: cover;
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
