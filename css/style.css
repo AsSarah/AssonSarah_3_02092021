@@ -176,7 +176,7 @@ header{
 }
 .adresse{ 
    margin-left: 1em;
-	font-family: bold 'Roboto', sans-serif;
+	font-family: bold, 'Roboto', sans-serif;
 }
 .Reservation{                          /* description*/
 	background-color: #f6f6f6;
