@@ -280,7 +280,7 @@ h2{
    /* justify-content: center; */
    align-items: center;
    background-color: #F2F2F2;
-   border: 3px solid #F2F2F2;
+   border: 1px solid #F2F2F2;
    padding-top: 0.5em;
    border-radius: 2em;
    margin-left: 2em;
@@ -1189,4 +1189,14 @@ transition-duration: .5s;
    transform: rotate(360deg);
  } 
 
+}
+                                       /* ipad pro*/
+@media (min-width:1200px){
+   .restaurant_img{                    /* Redimensionner l'image*/
+      height: 290px;
+      width: 350px;
+      object-fit: cover;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+   }
 }
