@@ -280,7 +280,7 @@ h2{
    /* justify-content: center; */
    align-items: center;
    background-color: #F2F2F2;
-   border: 1px solid #F2F2F2;
+
    padding-top: 0.5em;
    border-radius: 2em;
    margin-left: 2em;
@@ -399,6 +399,7 @@ h2{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+ 
     
  
 }
@@ -1190,3 +1191,4 @@ transition-duration: .5s;
  } 
 
 }
+
