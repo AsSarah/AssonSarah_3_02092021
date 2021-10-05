@@ -1190,13 +1190,3 @@ transition-duration: .5s;
  } 
 
 }
-                                       /* ipad pro*/
-@media (min-width:1200px){
-   .restaurant_img{                    /* Redimensionner l'image*/
-      height: 290px;
-      width: 350px;
-      object-fit: cover;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-   }
-}
