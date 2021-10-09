@@ -71,7 +71,7 @@ animation: Spin 2s 3s ease-in-out;
 @keyframes Spin{
   0% {
   
-   transform: scale(1.2);
+   transform: scale(1.2);   /* ici j'agrandis la taille de mon loading spinner*/
    opacity:  2;
 }
 30%{
@@ -125,15 +125,15 @@ animation: Spin 2s 3s ease-in-out;
 
 
 }
-@keyframes spinnerOne{
+@keyframes spinnerOne{                    /* notre loading spinner changera de largeur lors du changement de rotation*/
 
-   0% {transform: rotate(0deg); border-width: 10px; }
+   0% {transform: rotate(0deg); border-width: 10px; }       /* border-width permet justement de modifier la largeur des éléments du loading spinner */
     30% {transform: rotate(150deg); border-width: 1px;}
      50% {transform: rotate(250deg); border-width: 5px;}
       100% 
          {transform: rotate(360deg); border-width: 10px;}
 
-}
+}                 /* fin paramétre loading spinner*/
   
 header{
    display: flex;
@@ -144,7 +144,7 @@ header{
    margin-bottom: 2em;
    margin-top: 2em;
 }
-.logo_img{
+.logo_img{                                        /* Logo Oh my food */
    width: 200px;
 }
 .logo{
@@ -156,7 +156,7 @@ header{
    margin-top: 1em;
    margin-bottom: 1em;
 }
-.retour{
+.retour{                                     /* Bouton retour à la page d'accueil en haut à gauche */
    padding-right: 2em;
 }
 .fleche{
@@ -164,7 +164,7 @@ header{
    color: black;
  
 }
- 
+                                                   /* partie présentation avec adresse , bouton explorer  et bouton commander*/
 .Position{
    display: flex;
     flex-direction: row;
@@ -256,7 +256,7 @@ h2{
    margin-right: 1em;
   
 }
-.nombre{
+.nombre{                             /* paramétre la numérotation*/
    
    color: white;
    line-height: 1em;
@@ -272,7 +272,7 @@ h2{
    right: 1em;
 }
 
-.liste_nombre{
+.liste_nombre{                      /* Créer notre block qui englobe une à une chaque la description du fonctionnement*/
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
@@ -334,7 +334,7 @@ h2{
    color:mediumseagreen;
    font-weight: bold;
 }
-                   /* favoris*/
+                                 /* Bouton favoris*/
 .icone_coeur{
    margin-right: 5em;
     margin-bottom: 2em;
@@ -426,7 +426,7 @@ article{
 	
 }
 
-.restaurant{
+.restaurant{                     /*  Englobe notre artcle et son descriptif*/
   
    border-radius : 20px;
    background-color : white;
@@ -518,7 +518,7 @@ article{
     font-size: 1.5em;
 
 }
-
+                                                /* ici on paramétre pour définir qu'à temps de EM, le texte se coupe pour laisser place aux pointillés*/
  .carte_1:hover .descript_plats{                    /* masque les descriptions longues*/
   
     width: 13em;
@@ -531,7 +531,7 @@ article{
   
     width: 13em;
  }
-.carte_1, .carte_2,.carte_3{
+.carte_1, .carte_2,.carte_3{               /* pour avoir le même paramétre pour tous les menus*/
    box-shadow: -1px 2px 5px 1px rgb(91 106 80 / 29%), -1px 2px 20px rgb(255 255 255 / 60%) inset; /*inset= introduire*/
    margin-right: 0.5em; 
    margin-left: 0.5em; 
@@ -573,15 +573,15 @@ article{
 }
 
 
-/* permet d'afficher les elements du haut vers le bas*/
-.carte_1{
-   animation-delay: 600ms;
+/* paramétre d'affichage de l'animation des menus */
+.carte_1{                   /* s'affiche en premier*/
+   animation-delay: 600ms;                  
 }
-.carte_2{
+.carte_2{                     /* en second*/
    animation-delay:800ms;
 }
 
-.carte_3{
+.carte_3{                     /* en dernier*/
    animation-delay: 1000ms;        
 }
  @keyframes animate{
@@ -614,7 +614,7 @@ article{
 
 
  .carte_1:hover .check_box{
-   transform: translateX(-100px);
+   transform: translateX(-100px);   /* Permet à notre checkbox de se positionner à -100px sur l'axe des X et ainsi avoir l'affichage souhaité*/ 
    
 } 
 .check_box {
@@ -638,7 +638,7 @@ article{
    border-top-right-radius: 20px;
 }
 
-.icone{
+.icone{                       /* icone de la checkbox*/
   height: 1.6rem;
    width: 1.6rem;
    background-color: #fff;
@@ -654,7 +654,7 @@ article{
    margin-left: 1em;
    
 }
-.carte_1:hover  .icone {
+.carte_1:hover  .icone {         /* lors du passage de la souris, la checkbox se déploie et notre icone réalise une rotation de 360deg*/
   transform: rotate(360deg);
 }
 .check{
@@ -666,7 +666,7 @@ article{
    opacity: 1;
      text-indent: 0px;
 }
-.carte_2:hover  .prix {
+.carte_2:hover  .prix {                /* text indent permet de déplacer mon prix afin qu'il n'y pas confusion avec la checkbox*/
    text-indent: -65px;
    text-overflow: ellipsis;
    
@@ -880,7 +880,7 @@ footer{
 }
  
 
-@media only screen and (max-width: 601px){
+@media only screen and (max-width: 601px){                  /* Paramétres mobile*/
 
 .spinner{
    right: 35%;
@@ -900,7 +900,8 @@ footer{
    opacity: 1;
      text-indent: 0px;
 }
-.carte_1:hover .prix {
+.carte_1:hover .prix {   /* text indent permet de déplacer mon prix afin qu'il n'y pas confusion avec la checkbox*/
+   text-indent: -65px;
    text-indent: -70px;
    
    
@@ -964,7 +965,7 @@ footer{
    opacity: 1;
      text-indent: 0px;
 }
-.carte_2:hover  .prix {
+.carte_2:hover  .prix { 
    text-indent: -70px;
    text-overflow: ellipsis;
    
@@ -997,7 +998,7 @@ footer{
 
 
 }
-
+                                     /* Responsive tablette pour la checkbox*/
 @media only screen and (min-width: 768px) {
 
   
